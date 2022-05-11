@@ -1,10 +1,16 @@
 import Test from "./components/Test";
+import Home from "./components/Home"
+import './index.css'
+import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <Test />
-    </div>
+    <Router>  
+      <Routes>
+        <Route path='/' element={<Home />}/>
+        {/* <Route path='/signup' element={}/> */}
+      </Routes>
+    </Router>
   );
 }
 
